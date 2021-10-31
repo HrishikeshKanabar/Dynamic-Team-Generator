@@ -1,7 +1,7 @@
 //
 
-function cardManager(manager){
-    return `
+function cardManager(manager) {
+  return `
    
     <div class="col-md-3">       
     <div class="card">
@@ -22,12 +22,10 @@ function cardManager(manager){
     `;
 }
 
+function cardEng(engi) {
+  let view = "";
 
-function cardEng(engi){
-
-    let view = "";
-
-    for(let i=0;i<engi.length;i++){
+  for (let i = 0; i < engi.length; i++) {
     view += `
     <div class="col-md-3">       
     <div class="card">
@@ -45,16 +43,15 @@ function cardEng(engi){
     </div>
     </div>
     `;
-    }
+  }
 
-    return view;
+  return view;
 }
 
-function cardIntern(intre){
+function cardIntern(intre) {
+  let view = "";
 
-    let view = "";
-
-    for(let i=0;i<intre.length;i++){
+  for (let i = 0; i < intre.length; i++) {
     view += `
     <div class="col-md-3">       
     <div class="card">
@@ -72,19 +69,15 @@ function cardIntern(intre){
     </div>
     </div>
     `;
-    }
+  }
 
-    return view;
-
+  return view;
 }
-
 
 // Generate HTML
 
-
-
-module.exports = (mag,intr,eng)=>{
-    return `
+module.exports = (mag, intr, eng) => {
+  return `
     <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -112,4 +105,4 @@ ${cardIntern(intr)}
 </body>
 </html>
     `;
-}
+};

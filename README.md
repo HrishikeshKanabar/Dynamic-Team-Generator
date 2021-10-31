@@ -27,15 +27,15 @@
 
  Application        
 :--------------------------------:|
-![Web Application]()      
+![Web Application](https://github.com/HrishikeshKanabar/Dynamic-Team-Generator/blob/main/static_resource/team%20view.JPG)      
 
 Genrated HTML  
 :--------------------------------:|
-![Genrated HTML ]()  
+![Genrated HTML ](https://github.com/HrishikeshKanabar/Dynamic-Team-Generator/blob/main/static_resource/aap%20UI.JPG)  
 
 Test Cases 
 :--------------------------------:|
-![Genrated HTML ]()  
+![Genrated HTML ](https://github.com/HrishikeshKanabar/Dynamic-Team-Generator/blob/main/static_resource/testjs.JPG)  
 
 ## Requirement achieved 
 
