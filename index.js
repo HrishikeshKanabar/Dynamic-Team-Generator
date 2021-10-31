@@ -1,5 +1,13 @@
 const inq = require('inquirer');
 const file = require('fs');
+const mang = require('./lib/Manager');
+const eng = require('./lib/Engineer');
+const intern = require('./lib/Intern');
+const viewgen = require('./src/generateTeamView')
+const manager=[];
+const intn=[];
+const engi=[];
+
 
 // Ask questions related to manger at start of app
 function appStartquestions(){
@@ -70,11 +78,11 @@ function appStartquestions(){
           }
 
     ]).then((ans)=>{
-        console.log(ans);
-
+        //console.log(ans);
+        let Cretedmang = new mang(ans.fullName,ans.iden,ans.email,ans.officeNum);
+        //console.log(Cretedmang);
+        manager.push(Cretedmang);
         getMemberTypeQues(ans.memberTypeToBeCreated);
-        
-
     });
 
 }
@@ -148,7 +156,10 @@ function engineerQues(){
           }
 
     ]).then((engAns)=>{
-        console.log(engAns);
+        //console.log(engAns);
+        let createdEng = new eng(engAns.engFullName,engAns.engIden,engAns.engEmail,engAns.engGit);
+        //console.log(createdEng);
+        engi.push(createdEng);
         getMemberTypeQues(engAns.memberTypeToBeCreated);
 
     });
@@ -225,7 +236,10 @@ function internQues(){
           }
 
     ]).then((internAns)=>{
-        console.log(internAns);
+        //console.log(internAns);
+        let createdIntern=new intern(internAns.internFullName,internAns.internIden,internAns.internEmail,internAns.internSchool);
+        //console.log(createdIntern);
+        intn.push(createdIntern);
         getMemberTypeQues(internAns.memberTypeToBeCreated);
     });
 
@@ -239,10 +253,22 @@ function getMemberTypeQues(memberTypeToBeCreated){
     }else if(memberTypeToBeCreated=="Intern"){
         internQues();
     }else{
-        appStartquestions();
-
+        //console.log(manager);
+        //console.log(intn)
+        //console.log(engi);
+        generateViewFromPrompt(manager,intn,engi);
     }
 }
 
+function generateViewFromPrompt(mag,intr,eng){
+
+    file.writeFile("./dist/teamview.html", viewgen(mag,intr,eng), "utf-8",(err)=>{
+        if (err) {
+            return err;
+        }
+    }
+    );
+
+}
 
 appStartquestions();
