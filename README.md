@@ -6,7 +6,7 @@
 
 # View Demo (Video Demo)
 
- [Click here to see demo]()
+ [Click here to see demo](https://drive.google.com/file/d/1E-wBZWQ4SCoO8DMTR2NIQ8_NFEASkkND/view?usp=sharing)
 
 
 # Web Application (how to use)
@@ -76,13 +76,13 @@ Repository Quality: 13%
 
 ## Downloads and running code locally
 
-Step-1 git clone 
+Step-1 git clone https://github.com/HrishikeshKanabar/Dynamic-Team-Generator.git
 
 Step-2 open folder in VS Code
 
 Step-3 Install extension "open in browser"
 
-Step-4 Change directory to "Develop" (Cd Develop).
+Step-4 Run node index.js in terminal.
 
-Step-5 Run node index.js in terminal.
+Step-5 Open generated html in browser.
 
